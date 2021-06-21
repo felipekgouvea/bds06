@@ -26,9 +26,9 @@ public class ReviewService {
 		User user = authService.authenticated();
 
 		Review review = new Review();
-		review.setMovie(new Movie(dto.getMovieId(), null, null, null, null, null, null));
+		review.setMovie(new Movie(dto.getMovieId()));
 		review.setText(dto.getText());
-		review.setUser(new User(user.getId(), null, null, null));
+		review.setUser(new User(user.getId()));
 		review = repository.save(review);
 		
 		return new ReviewDTO(review, user);

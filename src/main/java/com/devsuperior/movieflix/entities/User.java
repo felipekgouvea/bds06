@@ -48,6 +48,10 @@ public class User implements Serializable, UserDetails{
 	public User() {
 	}
 
+	public User(Long id) {
+		this.id = id;
+	}
+
 	public User(Long id, String name , String email, String password) {
 		super();
 		this.id = id;		

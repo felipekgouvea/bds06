@@ -2,7 +2,6 @@ package com.devsuperior.movieflix.dto;
 
 import java.io.Serializable;
 
-import com.devsuperior.movieflix.entities.Genre;
 import com.devsuperior.movieflix.entities.Movie;
 
 public class MovieDTO implements Serializable{
@@ -36,11 +35,6 @@ public class MovieDTO implements Serializable{
 		imgUrl = entity.getImgUrl();
 		synopsis = entity.getSynopsis();
 		genre = new GenreDTO(entity.getGenre());
-	}
-	
-	public MovieDTO(Movie entity, Genre genre) {
-		this(entity);
-		this.genre = new GenreDTO(genre);
 	}
 
 	public Long getId() {
